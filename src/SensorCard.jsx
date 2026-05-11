@@ -1,3 +1,24 @@
+// tambahkan di luar function SensorCard, di bagian atas file
+export function tentukanStatus(tipe, nilai) {
+  const batas = {
+    suhu:       { dingin: 25, panas: 35 },
+    kelembapan: { kering: 40, basah: 80 },
+    ph:         { kering: 5.5, basah: 7.5 },  // kering = asam, basah = basa
+    nutrisi:    { kering: 150, basah: 300 },
+  }
+
+  const b = batas[tipe]
+  if (!b) return "normal"
+
+  if (nilai < b.dingin || nilai < b.kering) {
+    return tipe === "suhu" ? "dingin" : "kering"
+  }
+  if (nilai > b.panas || nilai > b.basah) {
+    return tipe === "suhu" ? "panas" : "basah"
+  }
+  return "normal"
+}
+
 function SensorCard({ icon, label, nilai, satuan, status }) {
 
   const warnaStatus = {

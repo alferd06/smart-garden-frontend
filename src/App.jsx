@@ -92,8 +92,9 @@ function AppDefault() {
 function App(){
   return(
     <Routes>
-      <Route path="/" element={<HalamanUtama />}/>
-      <Route path="/kebun" element={<HalamanKebun />}/>
+      <route path="/" element={<AppDefault/>}/>
+      <Route path="/kebun-utama" element={<HalamanUtama />}/>
+      <Route path="/kebun-cabang" element={<HalamanKebun />}/>
     </Routes>
   ) 
 }

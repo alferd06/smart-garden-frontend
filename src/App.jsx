@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import SensorCard, { tentukanStatus } from "./SensorCard"
 import PompaControl from "./PompaControl"
+import KartuKebun from "./KartuKebun"
+import FarmDashboard from "./FarmDashboard"
 
 function generateData() {
   return {
@@ -67,6 +69,14 @@ function App() {
       <PompaControl
         aktif={pompa}
         onToggle={() => setPompa(p => !p)}
+      />
+
+      <KartuKebun
+        namaAwal="Kebun Mawar"
+        lokasi="Rooftop Blok A"
+        luas={20}
+        jumlahSensor={4}
+        aktif={true}
       />
 
     </div>

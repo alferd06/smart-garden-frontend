@@ -3,6 +3,7 @@ import SensorCard, { tentukanStatus } from "./SensorCard"
 import PompaControl from "./PompaControl"
 import KartuKebun from "./KartuKebun"
 import FarmDashboard from "./FarmDashboard"
+import GrafikSuhu from "./GrafikSuhu"
 
 function generateData() {
   return {
@@ -78,6 +79,8 @@ function App() {
         jumlahSensor={4}
         aktif={true}
       />
+
+      <GrafikSuhu />
 
     </div>
   )

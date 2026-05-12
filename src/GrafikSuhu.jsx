@@ -22,14 +22,15 @@ function generateData(iter){
 
 generateData(10)
 
+console.log(df)
+
 function GrafikSuhu(){
-    return (
-    <LineChart data={df}>
-        <XAxis />
+    return(
+    <LineChart data={df} width={500} height={300}>
+        <XAxis dataKey={"waktu"}/>
         <YAxis />
-        <Line />
-    </LineChart>
-    )
+        <Line dataKey={"suhu"}/>
+    </LineChart>)
 }
 
 export default GrafikSuhu

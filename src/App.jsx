@@ -71,7 +71,7 @@ function App() {
         aktif={pompa}
         onToggle={() => setPompa(p => !p)}
       />
-
+      {/* kartu kebun */}
       <KartuKebun
         namaAwal="Kebun Mawar"
         lokasi="Rooftop Blok A"
@@ -85,5 +85,11 @@ function App() {
     </div>
   )
 }
+
+// function App(){
+//   <div>
+//     <GrafikSuhu />
+//   </div>
+// }
 
 export default App

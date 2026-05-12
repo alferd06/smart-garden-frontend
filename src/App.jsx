@@ -4,6 +4,9 @@ import PompaControl from "./PompaControl"
 import KartuKebun from "./KartuKebun"
 import FarmDashboard from "./FarmDashboard"
 import GrafikSuhu from "./GrafikSuhu"
+import { Route, Routes } from "react-router-dom"
+import HalamanKebun from "./pages/HalamanKebun"
+import HalamanUtama from "./pages/HalamanUtama"
 
 function generateData() {
   return {
@@ -14,7 +17,7 @@ function generateData() {
   }
 }
 
-function App() {
+function AppDefault() {
   const [sensor, setSensor] = useState(generateData())
   const [pompa, setPompa] = useState(false)
   const [lastUpdate, setLastUpdate] = useState(new Date().toLocaleTimeString("id-ID"))
@@ -86,10 +89,13 @@ function App() {
   )
 }
 
-// function App(){
-//   <div>
-//     <GrafikSuhu />
-//   </div>
-// }
+function App(){
+  return(
+    <Routes>
+      <Route path="/" element={<HalamanUtama />}/>
+      <Route path="/kebun" element={<HalamanKebun />}/>
+    </Routes>
+  ) 
+}
 
 export default App

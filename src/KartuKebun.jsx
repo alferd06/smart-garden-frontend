@@ -13,7 +13,7 @@ function KartuKebun({namaAwal, lokasi, luas, jumlahSensor, aktif}) {
     }
 
     return(
-        <div className="bg-gray-800 rounded-2xl p-6 border-t-4 border-green-400 max-w-sm">
+        <div className="bg-gray-800 rounded-2xl mt-4 p-6 border-t-4 border-green-400 max-w-sm">
             {editMode ?
             <input value={nama} onChange={(e) => setNama(e.target.value)} className="bg-gray-700 text-white p-2 rounded-lg w-full"/>
             : <h2 className="text-white text-2xl font-bold">{nama}</h2>}

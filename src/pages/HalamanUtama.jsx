@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom"
+import KartuKebun from "../components/KartuKebun"
 
 export default function HalamanUtama(){
     return(
-        <div>
-            <h1>Ini Halaman Utama</h1>
-            <Link to="/kebun" >Ke Kebun</Link>
+        <div className="bg-gray-900 min-h-screen p-8">
+            <KartuKebun 
+            namaAwal="Alwi"
+            lokasi="Selajambe"
+            luas={35}
+            jumlahSensor={4}
+            aktif={true}/>
         </div>
     )
 }

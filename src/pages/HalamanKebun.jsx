@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import GrafikSuhu from "../components/GrafikSuhu"
 import PompaControl from "../components/PompaControl"
 import SensorCard, { tentukanStatus } from "../components/SensorCard"
@@ -13,7 +13,7 @@ function generateData() {
   }
 }
 
-export default function HalamanKebun(){
+export default function tampilan(){
     const [sensor, setSensor] = useState(generateData())
 
     return(

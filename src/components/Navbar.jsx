@@ -13,17 +13,10 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                    to="/kebun-utama"
+                    to="/kebun"
                     className="hover:bg-red-700/70 rounded-lg text-yellow-300 transition duration-200 px-2 py-3"
                 >
-                    Kebun Utama
-                </Link>
-
-                <Link
-                    to="/kebun-cabang"
-                    className="hover:bg-red-700/70 rounded-lg text-yellow-300 transition duration-200 px-2 py-3"
-                >
-                    Kebun Cabang
+                    Kebun
                 </Link>
 
             </div>
